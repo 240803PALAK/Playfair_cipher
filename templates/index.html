@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayFair Cipher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1 class="heading">PlayFair Cipher</h1>
+    </header>
+    <div class="container1" id="container1">
+        <div class="block">
+            <h2>PlainText</h2>
+            <textarea rows="5" id="plaintext"></textarea>
+        </div>
+        <div class="block">
+            <div class="radio-group">
+                <input type="radio" name="options" value="1" id="option11" checked>
+                <label for="option1">Encrypt</label>
+                <input type="radio" name="options" value="2" id="option12">
+                <label for="option2">Decrypt</label>
+              </div>
+            <h2>Key</h2>
+            <textarea rows="1" id="key"></textarea>
+            <button id='EncryptBtn'>Encrypt</button>
+
+        </div>
+        <div class="block">
+            <h2>CipherText</h2>
+            <textarea rows="5" id="ciphertext" readonly></textarea>
+        </div>
+    </div>
+    <div class="container2" id="container2">
+        <div class="block">
+            <h2>CipherText</h2>
+            <textarea rows="5" id="decryptcipher"></textarea>
+        </div>
+        <div class="block">
+            <div class="radio-group">
+                <input type="radio" name="options" value="1" id="option21">
+                <label for="option1">Encrypt</label>
+                <input type="radio" name="options" value="2" id="option22" checked>
+                <label for="option2">Decrypt</label>
+              </div>
+            <h2>Key</h2>
+            <textarea rows="1" id="decryptkey" readonly></textarea>
+            <button id="DecryptBtn">Decrypt</button>
+
+        </div>
+        <div class="block">
+            <h2>PlainText</h2>
+            <textarea rows="5" id="decryptplain" readonly></textarea>
+        </div>
+    </div>
+</body>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</html>
